@@ -42,4 +42,18 @@ Requirements:
 - Claude Code cloud: works with the default Trusted network level.
 - Fetch with `curl`, not a summarizing web fetch tool, so the text is verbatim.
 
-The exact text to put in the preferences is still to be defined.
+Text to put in the preferences:
+
+```
+At the start of every session, before doing anything else, run this in Bash and follow the output as my global working rules for the whole session:
+
+curl -fsSL https://raw.githubusercontent.com/EdoaLive/ctrlback/main/rules.md
+
+Use curl, never a web fetch tool (it summarizes instead of returning the exact text). If the download fails, tell me and continue without the rules.
+```
+
+Notes:
+
+- The instruction is soft: the model has to follow it, nothing enforces it.
+- GitHub's CDN caches raw files for about 5 minutes, so an edit may not show up immediately.
+- Tested in Claude Code cloud and Cowork cloud: works in both.

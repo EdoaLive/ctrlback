@@ -23,4 +23,6 @@
 - Chosen direction: put a one-line instruction in the preferences of each environment: at session start, fetch `rules.md` from a raw GitHub URL with `curl` and follow it. Single source of truth, no sync. Do not use WebFetch (it summarizes, not verbatim).
 - Raw URL: `https://raw.githubusercontent.com/<owner>/<repo>/<branch>/<path>` (github.com URL with `blob/` removed). Source: community discussions, not official docs.
 - Known limits: the instruction is soft (not enforced like a hook); CDN cache can serve stale content after a commit; a private repo needs a token.
-- Open: public vs private repo; exact preference text; create repo and commit (not done); Cowork desktop app deliberately out of scope for now.
+- Done: repo is public (`EdoaLive/ctrlback`), pushed to `main`; raw URL returns 200. Preference text is in `README.md`.
+- Tested: the preference text works in Claude Code cloud and in Cowork cloud.
+- Out of scope for now: Cowork desktop app.
